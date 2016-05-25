@@ -1,0 +1,87 @@
+What is REST?
+------------
+
+Representational State Transfer.
+
+Its NOT a standard. Its more guidelines.
+
+Architectural style for designing distributed systems.
+Not tied to HTTP but associated most commonly with it.
+
+Used in API design. Access to endpoints.
+
+
+Rest was built with the pains of SOAP
+Built on principles of HTTP (Using the verbs GET POST DELETE PUT)
+
+Services can return:
+XML, JSON, HTML, Plain text and Binary/Octet- which are images/pdf etc.
+
+
+
+RESTful URLS
+------------
+
+These are always centred around nouns and never verbs.
+	https://localhost:8080/car-rental/cars
+
+cars are the nouns - here u'd expect a collection of cars to be returned.
+
+Verbs are expressed thru protocol (GET POST DELETE PUT)
+
+Path is used to get a specific instance.
+	https://localhost:80808/car-rental/reservations/1234
+
+ - the 1234 reservation will be returned
+
+
+
+Architecture
+------------
+
+Richardson Maturity Model
+
+pyramid structure with 4 levels
+
+
+	Restful
+	Level 3: Hypermedia Controls (what to do with reurned info ie HATEOS)
+	Level 2: HTTP verbs (use of the verbs, http response codes used)
+	Level 1: Resources (multiple endpoints and urls, rest-like but focused on objects)
+	Level 0: POX (sending plain old xml over http. one endpoint)
+
+
+Once you reach Level 3 you are really and truly RESTful.
+
+
+Level 2 focuses on HTTP Verbs
+CRUD operations
+Post Get Put Delete (web hardly uses Put/Delete)
+
+Level 3 includes Level 2 but puts a focus on Discoverability
+	HATEOS (HyperMedia As The Engine Of Application State)
+	Client interacts with the server thru hypermedia
+	Concept is to decouple client and server allowing them to evolve
+		Interactions begin with a fixed URL
+		Future interactions are determined by the server
+	Concepts of HATEOS are to help promote long term design
+
+
+
+
+CRUD FUNCTIONS
+--------------
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
