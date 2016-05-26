@@ -39,7 +39,7 @@ Path is used to get a specific instance.
 Architecture
 ------------
 
-Richardson Maturity Model
+Richardson Maturity Model - defines how RESTful your app is.
 
 pyramid structure with 4 levels
 
@@ -64,18 +64,62 @@ Level 3 includes Level 2 but puts a focus on Discoverability
 	Concept is to decouple client and server allowing them to evolve
 		Interactions begin with a fixed URL
 		Future interactions are determined by the server
-	Concepts of HATEOS are to help promote long term design
+	Concepts of HATEOAS are to help promote long term design
 
+REST Principles
+---------------
 
+There is a request and a response
+Resources are all named through URLs
+Resources provide links to other resources
+There is a standard interface into the app using one of the HTTP methods
 
 
 CRUD FUNCTIONS
 --------------
 
+Modifying info in the database world.
+Level 2 of RMM is do with mapping crud functions with their appropriate HTTP
+equivalents.
+Create = POST
+Read = GET
+Update = PUT
+Delete = DELETE
+
+Sometimes people use POST for Create and Update.
+
+
+JSON
+----
+
+JavaScript object Notation.
+Pronounced jason
+Preferred when working with JS clients
+Looser way to represent data
+Flexible and easy to work with
+Preferred over XML
+
+However difficult to validate so XML wins on that front - but only that front.
+
+XML
+---
+
+Been around for ages
+Often associated with SOAP
+Still ok to use with REST
+Easily to validate
+
+
+BINARY
+------
+Not an alternative to JSON or XML
+Used to serve objects such as files, images, pdfs
 
 	
 
-
+Get Method
+---------
+Used to retrieve data
 
 
 
