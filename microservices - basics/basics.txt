@@ -1,0 +1,54 @@
+
+Microservices are small, autonomous services that work together. Each service runs as a separate process.
+
+A monolithic application is quote the opposite. Every service is in one giant application running as one process.
+
+An analogy we can use is:
+
+Consider a stereo hifi system. Each section of the system is independent such as the vinyl player, amplifier, cassette player, cd rack. Etc.
+If you want to upgrade simply unplug that section of the system and replace or upgrade. This does not affect the other components of the system.
+
+MS's are a specific way of doing SOA well and is akin to Scrum is an apporach for Agile development.
+
+
+How small should an MS be ? Small enough as possible really. The smaller you get the more the benefits of interdependence increases.
+
+Autonomous:
+
+All communication between the services themselves are via network calls, to enforce separation between the services and avoid the perils of 
+tight coupling.
+
+Our service exposes an application programming interface (API), and collaborating services communicate with us via those APIs.
+
+The golden rule: can you make a change to a service and deploy it by itself without changing anything else? ANSWER SHOULD BE YES.
+
+
+Key Benefits:
+
+1. Technology Heterogeneity
+Within the multiple services we can use differing technology stacks. In essence we can use the right tool for the job.
+For example, for a social network, we might store our users’ interactions in a graph-oriented database to reflect the highly interconnected nature of a social graph, but perhaps the posts the users make could be stored in a document-oriented data store, giving rise to a heterogeneous architecture.
+
+With a monolithic application, if I want to try a new programming language, database, or framework, any change will impact a large amount of my system. 
+With a system consisting of multiple services, I have multiple new places in which to try out a new piece of technology. I can pick a service that
+is perhaps lowest risk and use the technology there, knowing that I can limit any potential negative impact.
+
+
+2. Resilience.
+If one ms fails it shouldn't affect the rest of the system as long as it doesnt cascade so you can isolate and fix. Quite the opposite in a monolith -> if something fails the whole system commes to a halt.
+
+
+3. Scales well.
+Within a monolith, if we need to scale we must scale everythung together. With ms we can scale those services that require scaling independently.
+
+3. Ease of deployment.
+A one line change in a monolith means stop application and deploy which affects the whole application as downtime is witnessed.So what tends to happen is
+a build up of code change and then slap bang one release. This limits releases as vendors want to limit downtime. Also if there is a big delta between
+changes there is more chance of something failing. 
+With ms - we can deploy independently and any issues we can roll back. Simple.
+
+
+
+
+
+
